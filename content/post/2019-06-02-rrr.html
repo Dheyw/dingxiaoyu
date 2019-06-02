@@ -1,0 +1,14 @@
+---
+title: RRR
+author: ''
+date: '2019-06-01'
+slug: rrr
+categories: []
+tags: []
+---
+
+
+
+<p>library(xml2)#加载包 library(rvest)#加载包 url&lt;-‘<a href="http://www.gov.cn/zhuanti/2018lh/2018zfgzbg/zfgzbg.htm" class="uri">http://www.gov.cn/zhuanti/2018lh/2018zfgzbg/zfgzbg.htm</a>’ web&lt;-read_html(url,encoding = “utf-8”)#读取数据，规定编码</p>
+<p>library(jiebaRD)#加载包 library(jiebaR)#加载包 engine_s&lt;-worker(stop_word = “C:\dingxiaoyu\stopwords.txt”)#初始化分词引擎并加载停用词。 seg&lt;-segment(Position,engine_s)#分词 f&lt;-freq(seg)#统计词频 f&lt;-f[order(f[2],decreasing = TRUE),]#根据词频降序排列 print(f)</p>
+<p>library(yaml)#加载包 library(wordcloud2)#加载包 f1&lt;-f[1:100,]#提取前100词 wordcloud2(f1,size = 0.5,shape=‘star’)#形状设置为星形</p>

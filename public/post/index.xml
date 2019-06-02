@@ -12,12 +12,25 @@
     
     
     <item>
-      <title>Rvest</title>
-      <link>/2019/06/02/rvest/</link>
+      <title>The Assembly Call</title>
+      <link>/2019/06/02/the-assembly-call/</link>
       <pubDate>Sun, 02 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/06/02/rvest/</guid>
-      <description></description>
+      <guid>/2019/06/02/the-assembly-call/</guid>
+      <description>集结号！号角吹响 征途启程！ 这就是集结号！千军万马集结，与我一同冲锋陷阵 !!这就是集结号!!苦痛是历练 与我共筑不屈不挠的意志!! 这就是集结号！相信自己 承受所有一切 努力拼搏 到达梦想的彼岸！
+“当你开始变的让人羡慕，总是会有一帮说着风凉话的怨妇，他们在你面前一副看不上的面目，嘴里都是各种不屑心里却想得到眷顾，你的成功变成了他们的痛处，明白人总是爱比较的动物，但是嫉妒是来自弱者无力的控诉，活着是为了创造不是为了胜负。”
+“质疑往往来自误会，消除质疑的方式，不是争辩而是证明 不管别人说什么，我在做我内心认为正确的事，问心无愧，堂堂正正。” __Lay Zhang</description>
+    </item>
+    
+    <item>
+      <title>RRR</title>
+      <link>/2019/06/01/rrr/</link>
+      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/01/rrr/</guid>
+      <description>library(xml2)#加载包 library(rvest)#加载包 url&amp;lt;-‘http://www.gov.cn/zhuanti/2018lh/2018zfgzbg/zfgzbg.htm’ web&amp;lt;-read_html(url,encoding = “utf-8”)#读取数据，规定编码
+library(jiebaRD)#加载包 library(jiebaR)#加载包 engine_s&amp;lt;-worker(stop_word = “C:\dingxiaoyu\stopwords.txt”)#初始化分词引擎并加载停用词。 seg&amp;lt;-segment(Position,engine_s)#分词 f&amp;lt;-freq(seg)#统计词频 f&amp;lt;-f[order(f[2],decreasing = TRUE),]#根据词频降序排列 print(f)
+library(yaml)#加载包 library(wordcloud2)#加载包 f1&amp;lt;-f[1:100,]#提取前100词 wordcloud2(f1,size = 0.5,shape=‘star’)#形状设置为星形</description>
     </item>
     
     <item>
@@ -26,9 +39,9 @@
       <pubDate>Sun, 26 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/05/26/sweet-talk/</guid>
-      <description>下午和朋友约了去她姐姐的甜品工作室做烘焙。一进门，我的天哪，太可爱的厨房了吧，装修以粉蓝色为主，干净整洁，小锅小碗各种烘焙工具挂了整整一面墙，简直少女心爆棚！
-她给我拿了一些昨天做的蛋糕，嘿我就边吃边看着她做啦。她跟我吹她做的蛋挞可好吃，hhhh结果还是照着网上配方做的备好原料，拉着我一起捏蛋挞皮和小面包，我拿剪刀剪了个小刺猬，可爱可爱，就是最后烤出来的成品刺猬背上的刺有些焦了（这不重要
-emmmm女孩子嘛，做好东西第一件事绝对不是吃，必须得拍照hhhhh，于是就看两个人围着一盘蛋挞和一盘小面包各种角度拍了得有20分钟吧，然后边吃边修图……后来发了条朋友圈，还有朋友问我是在哪里，说想去玩，嘿这算不算也是给她姐姐拉了生意呢哈哈
+      <description>下午和朋友约了去她姐姐的甜品工作室做烘焙。一进门，我的天哪，太可爱的厨房了吧，装修以粉蓝色为主，干净整洁，小锅小碗各种烘焙工具挂了整整一面墙，简直少女心爆棚！
+她给我拿了一些昨天做的蛋糕，嘿我就边吃边看着她做啦。她跟我吹她做的蛋挞可好吃，hhhh结果还是照着网上配方做的 备好原料，拉着我一起捏蛋挞皮和小面包，我拿剪刀剪了个小刺猬，可爱可爱，就是最后烤出来的成品刺猬背上的刺有些焦了（这不重要
+emmmm女孩子嘛，做好东西第一件事绝对不是吃，必须得拍照hhhhh，于是就看两个人围着一盘蛋挞和一盘小面包各种角度拍了得有20分钟吧，然后边吃边修图…… 后来发了条朋友圈，还有朋友问我是在哪里，说想去玩，嘿这算不算也是给她姐姐拉了生意呢哈哈
 这位也是一个很难得约到的朋友啊，时间总凑不到一起，但是久不久能见一面也很开心了!
 以下为我的彩虹屁：
 炒鸡漂亮的厨房
@@ -36,7 +49,7 @@ emmmm女孩子嘛，做好东西第一件事绝对不是吃，必须得拍照hhh
 超级好吃的蛋挞
 可爱的要死的小猫
 烘焙真好玩
-#有一个会做甜品的朋友是一种怎样的体验2.0#</description>
+有一个会做甜品的朋友是一种怎样的体验2.0</description>
     </item>
     
     <item>
