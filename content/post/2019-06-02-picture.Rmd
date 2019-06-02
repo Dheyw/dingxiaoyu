@@ -1,0 +1,51 @@
+---
+title: picture
+author: ''
+date: '2019-06-02'
+slug: picture
+categories: []
+tags: []
+---
+```{r}
+# library & data
+library(ggplot2)
+data=data.frame(x=rnorm(100))
+
+# Basic plot with title
+ggplot( data=data, aes(x=x)) + 
+  geom_histogram(fill="skyblue", alpha=0.5) +
+  ggtitle("A blue Histogram") +
+  theme_minimal()
+
+# title on several lines
+ggplot( data=data, aes(x=x)) + 
+  geom_histogram(fill="skyblue", alpha=0.5) +
+  ggtitle("A blue \nHistogram") +
+  theme_minimal() 
+
+# Custom title appearance
+ggplot( data=data, aes(x=x)) + 
+  geom_histogram(fill="skyblue", alpha=0.5) +
+  ggtitle("A blue Histogram") +
+  theme_minimal() +
+  theme(
+    plot.title=element_text(family='', face='bold', colour='purple', size=26)
+  )
+
+# Adjust the position of title
+ggplot( data=data, aes(x=x)) + 
+  geom_histogram(fill="skyblue", alpha=0.8) +
+  ggtitle("With title on the right") +
+  theme_minimal() +
+  theme(
+    plot.title=element_text( hjust=1, vjust=0.5, face='bold')
+  )
+
+# Custom a few word of the title only:
+my_title <- expression(paste("A ", italic(bold("blue")), " histogram"))
+ggplot( data=data, aes(x=x)) + 
+  geom_histogram(fill="skyblue", alpha=0.8) +
+  ggtitle(my_title) +
+  theme_minimal()
+```
+

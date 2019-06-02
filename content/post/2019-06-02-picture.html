@@ -1,0 +1,62 @@
+---
+title: picture
+author: ''
+date: '2019-06-02'
+slug: picture
+categories: []
+tags: []
+---
+
+
+
+<pre class="r"><code># library &amp; data
+library(ggplot2)</code></pre>
+<pre><code>## Registered S3 methods overwritten by &#39;ggplot2&#39;:
+##   method         from 
+##   [.quosures     rlang
+##   c.quosures     rlang
+##   print.quosures rlang</code></pre>
+<pre class="r"><code>data=data.frame(x=rnorm(100))
+
+# Basic plot with title
+ggplot( data=data, aes(x=x)) + 
+  geom_histogram(fill=&quot;skyblue&quot;, alpha=0.5) +
+  ggtitle(&quot;A blue Histogram&quot;) +
+  theme_minimal()</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="/post/2019-06-02-picture_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code># title on several lines
+ggplot( data=data, aes(x=x)) + 
+  geom_histogram(fill=&quot;skyblue&quot;, alpha=0.5) +
+  ggtitle(&quot;A blue \nHistogram&quot;) +
+  theme_minimal() </code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="/post/2019-06-02-picture_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
+<pre class="r"><code># Custom title appearance
+ggplot( data=data, aes(x=x)) + 
+  geom_histogram(fill=&quot;skyblue&quot;, alpha=0.5) +
+  ggtitle(&quot;A blue Histogram&quot;) +
+  theme_minimal() +
+  theme(
+    plot.title=element_text(family=&#39;&#39;, face=&#39;bold&#39;, colour=&#39;purple&#39;, size=26)
+  )</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="/post/2019-06-02-picture_files/figure-html/unnamed-chunk-1-3.png" width="672" /></p>
+<pre class="r"><code># Adjust the position of title
+ggplot( data=data, aes(x=x)) + 
+  geom_histogram(fill=&quot;skyblue&quot;, alpha=0.8) +
+  ggtitle(&quot;With title on the right&quot;) +
+  theme_minimal() +
+  theme(
+    plot.title=element_text( hjust=1, vjust=0.5, face=&#39;bold&#39;)
+  )</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="/post/2019-06-02-picture_files/figure-html/unnamed-chunk-1-4.png" width="672" /></p>
+<pre class="r"><code># Custom a few word of the title only:
+my_title &lt;- expression(paste(&quot;A &quot;, italic(bold(&quot;blue&quot;)), &quot; histogram&quot;))
+ggplot( data=data, aes(x=x)) + 
+  geom_histogram(fill=&quot;skyblue&quot;, alpha=0.8) +
+  ggtitle(my_title) +
+  theme_minimal()</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="/post/2019-06-02-picture_files/figure-html/unnamed-chunk-1-5.png" width="672" /></p>

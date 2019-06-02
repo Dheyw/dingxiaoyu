@@ -23,14 +23,12 @@
     </item>
     
     <item>
-      <title>RRR</title>
-      <link>/2019/06/01/rrr/</link>
-      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      <title>picture</title>
+      <link>/2019/06/02/picture/</link>
+      <pubDate>Sun, 02 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/06/01/rrr/</guid>
-      <description>library(xml2)#加载包 library(rvest)#加载包 url&amp;lt;-‘http://www.gov.cn/zhuanti/2018lh/2018zfgzbg/zfgzbg.htm’ web&amp;lt;-read_html(url,encoding = “utf-8”)#读取数据，规定编码
-library(jiebaRD)#加载包 library(jiebaR)#加载包 engine_s&amp;lt;-worker(stop_word = “C:\dingxiaoyu\stopwords.txt”)#初始化分词引擎并加载停用词。 seg&amp;lt;-segment(Position,engine_s)#分词 f&amp;lt;-freq(seg)#统计词频 f&amp;lt;-f[order(f[2],decreasing = TRUE),]#根据词频降序排列 print(f)
-library(yaml)#加载包 library(wordcloud2)#加载包 f1&amp;lt;-f[1:100,]#提取前100词 wordcloud2(f1,size = 0.5,shape=‘star’)#形状设置为星形</description>
+      <guid>/2019/06/02/picture/</guid>
+      <description># library &amp;amp; datalibrary(ggplot2)## Registered S3 methods overwritten by &amp;#39;ggplot2&amp;#39;:## method from ## [.quosures rlang## c.quosures rlang## print.quosures rlangdata=data.frame(x=rnorm(100))# Basic plot with titleggplot( data=data, aes(x=x)) + geom_histogram(fill=&amp;quot;skyblue&amp;quot;, alpha=0.5) +ggtitle(&amp;quot;A blue Histogram&amp;quot;) +theme_minimal()## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.# title on several linesggplot( data=data, aes(x=x)) + geom_histogram(fill=&amp;quot;skyblue&amp;quot;, alpha=0.5) +ggtitle(&amp;quot;A blue \nHistogram&amp;quot;) +theme_minimal() ## `stat_bin()` using `bins = 30`.</description>
     </item>
     
     <item>
