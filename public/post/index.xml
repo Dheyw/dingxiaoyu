@@ -21,12 +21,12 @@
     </item>
     
     <item>
-      <title>rvest</title>
-      <link>/2019/06/03/rvest/</link>
+      <title>rvest 爬取ncbi文献列表</title>
+      <link>/2019/06/03/r/</link>
       <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/06/03/rvest/</guid>
-      <description></description>
+      <guid>/2019/06/03/r/</guid>
+      <description>library(rvest)## 载入需要的程辑包：xml2library(knitr)link &amp;lt;- &amp;#39;https://www.ncbi.nlm.nih.gov/pubmed/?term=disaster&amp;#39;web &amp;lt;- read_html(link)title &amp;lt;- web %&amp;gt;% html_nodes(&amp;#39;div.rslt p.title a&amp;#39;) %&amp;gt;%html_text()author &amp;lt;- web %&amp;gt;% html_nodes(&amp;#39;div.supp p.desc&amp;#39;) %&amp;gt;%html_text()journal &amp;lt;- web %&amp;gt;% html_nodes(&amp;#39;div.supp p.details span&amp;#39;) %&amp;gt;%html_text()dat &amp;lt;- data.frame(Title = title, Author = author, Journal = journal)kable(dat, format=&amp;quot;html&amp;quot;)TitleAuthorJournalStrategy for phytomanagement in an area affected by iron ore dam rupture: A study case in Minas Gerais State, Brazil.</description>
     </item>
     
     <item>
@@ -41,7 +41,7 @@
     </item>
     
     <item>
-      <title>条形图</title>
+      <title>ggplot条形图</title>
       <link>/2019/06/02/picture/</link>
       <pubDate>Sun, 02 Jun 2019 00:00:00 +0000</pubDate>
       

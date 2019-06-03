@@ -1,0 +1,21 @@
+---
+title: rvest 爬取ncbi文献列表
+author: ''
+date: '2019-06-03'
+slug: r
+categories: []
+tags: []
+---
+```{r}
+library(rvest)
+library(knitr)
+link <- 'https://www.ncbi.nlm.nih.gov/pubmed/?term=disaster'
+web <- read_html(link)
+title <- web %>% html_nodes('div.rslt p.title a') %>%html_text()
+author <- web %>% html_nodes('div.supp p.desc') %>%html_text()
+journal <- web %>% html_nodes('div.supp p.details span') %>%html_text()
+dat <- data.frame(Title = title, Author = author, Journal = journal)
+kable(dat, format="html")
+write.table(dat, 'disaster_paper.txt', sep="", row.names = F, quote = F)
+```
+

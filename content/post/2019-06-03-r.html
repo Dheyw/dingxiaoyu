@@ -1,0 +1,259 @@
+---
+title: rvest 爬取ncbi文献列表
+author: ''
+date: '2019-06-03'
+slug: r
+categories: []
+tags: []
+---
+
+
+
+<pre class="r"><code>library(rvest)</code></pre>
+<pre><code>## 载入需要的程辑包：xml2</code></pre>
+<pre class="r"><code>library(knitr)
+link &lt;- &#39;https://www.ncbi.nlm.nih.gov/pubmed/?term=disaster&#39;
+web &lt;- read_html(link)
+title &lt;- web %&gt;% html_nodes(&#39;div.rslt p.title a&#39;) %&gt;%html_text()
+author &lt;- web %&gt;% html_nodes(&#39;div.supp p.desc&#39;) %&gt;%html_text()
+journal &lt;- web %&gt;% html_nodes(&#39;div.supp p.details span&#39;) %&gt;%html_text()
+dat &lt;- data.frame(Title = title, Author = author, Journal = journal)
+kable(dat, format=&quot;html&quot;)</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Title
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Journal
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Strategy for phytomanagement in an area affected by iron ore dam rupture: A study case in Minas Gerais State, Brazil.
+</td>
+<td style="text-align:left;">
+Zago VCP, das Dores NC, Watts BA.
+</td>
+<td style="text-align:left;">
+Environ Pollut
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Trends in the travelers’ demand for pre-travel medical advice at a Spanish International Vaccination Center between 2000 and 2017.
+</td>
+<td style="text-align:left;">
+Segura M, Lopez-Gigosos R, Mariscal-Lopez E, Gutierrez-Bedmar M, Mariscal A.
+</td>
+<td style="text-align:left;">
+PLoS One
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Violence against children and natural disasters: A systematic review and meta-analysis of quantitative evidence.
+</td>
+<td style="text-align:left;">
+Cerna-Turoff I, Fischer HT, Mayhew S, Devries K.
+</td>
+<td style="text-align:left;">
+PLoS One
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+The importance of education on disasters and emergencies: A review article.
+</td>
+<td style="text-align:left;">
+Torani S, Majd PM, Maroufi SS, Dowlati M, Sheikhi RA.
+</td>
+<td style="text-align:left;">
+J Educ Health Promot
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Antemortem dental records versus individual identification.
+</td>
+<td style="text-align:left;">
+Thampan N, Janani R, Ramya R, Bharanidharan R, Kumar AR, Rajkumar K.
+</td>
+<td style="text-align:left;">
+J Forensic Dent Sci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Tooth reconstruction in forensic situations through dental materials: An anatomical art.
+</td>
+<td style="text-align:left;">
+Jani G, Johnson A.
+</td>
+<td style="text-align:left;">
+J Forensic Dent Sci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+The use of dental records as a tool for the Unique Identification Authority of India in personal identification: A proposal.
+</td>
+<td style="text-align:left;">
+Arora KS, Bansal R.
+</td>
+<td style="text-align:left;">
+J Forensic Dent Sci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Characterizing the Current State of Training Courses Available to US Disaster Professionals.
+</td>
+<td style="text-align:left;">
+Kirsch T, Keim M, Strauss-Riggs K.
+</td>
+<td style="text-align:left;">
+Disaster Med Public Health Prep
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Scabies outbreak investigation and risk factors in Kechabira district, Southern Ethiopia: unmatched case control study.
+</td>
+<td style="text-align:left;">
+Wochebo W, Haji Y, Asnake S.
+</td>
+<td style="text-align:left;">
+BMC Res Notes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+iTRAQ-Based Quantitative Analysis of Responsive Proteins Under PEG-Induced Drought Stress in Wheat Leaves.
+</td>
+<td style="text-align:left;">
+Wang Y, Zhang X, Huang G, Feng F, Liu X, Guo R, Gu F, Zhong X, Mei X.
+</td>
+<td style="text-align:left;">
+Int J Mol Sci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+The Frontiers of Uncertainty Estimation in Interdisciplinary Disaster Research and Practice.
+</td>
+<td style="text-align:left;">
+Nateghi R, Sutton J, Murray-Tuite P.
+</td>
+<td style="text-align:left;">
+Risk Anal
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ebola Response: A study of the Psychosocial Factors of Preparedness Among Commissioned Corps Officers of the United States Public Health Service.
+</td>
+<td style="text-align:left;">
+Sumter JL, Roberts J, Goodrich-Doctor A, Mason TJ.
+</td>
+<td style="text-align:left;">
+Mil Med
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Shipboard Global Health Engagement Missions: Essential Lessons for Military Healthcare Personnel.
+</td>
+<td style="text-align:left;">
+King HC, Bouvier M, Todd N, Bryan CJ, Montalto G, Johnson C, Hawkins R, Braun LA, Malone J, Kelley PW.
+</td>
+<td style="text-align:left;">
+Mil Med
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A Patient of Using Presepsin to Diagnose Streptococcal Toxic Shock Syndrome during Anticancer Drug Treatment.
+</td>
+<td style="text-align:left;">
+Takahashi G.
+</td>
+<td style="text-align:left;">
+Case Rep Crit Care
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sepsis-associated disseminated intravascular coagulation and its differential diagnoses.
+</td>
+<td style="text-align:left;">
+Iba T, Watanabe E, Umemura Y, Wada T, Hayashida K, Kushimoto S; Japanese Surviving Sepsis Campaign Guideline Working Group for disseminated intravascular coagulation, Wada H.
+</td>
+<td style="text-align:left;">
+J Intensive Care
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Emotional and Physical Child Abuse in The Context of Natural Disasters: A Focus on Haiti.
+</td>
+<td style="text-align:left;">
+Subedi S, Bartels S, Davison C.
+</td>
+<td style="text-align:left;">
+Disaster Med Public Health Prep
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Prioritizing the sexual and reproductive health and rights of adolescent girls and young women within HIV treatment and care services in emergency settings: a girl-centered agenda.
+</td>
+<td style="text-align:left;">
+Roxo U, Mobula ML, Walker D, Ficht A, Yeiser S.
+</td>
+<td style="text-align:left;">
+Reprod Health
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+In-Fiber Closed Cavity Interferometric High-Resolution Aqueous Solution and Alcohol Gas Refractometer.
+</td>
+<td style="text-align:left;">
+Li L, Xu T, Liu Y, Zhang Z, Ma Q, Shi Z, Jia W, Sun J, Yu F, Mba Ndong Mangue P.
+</td>
+<td style="text-align:left;">
+Sensors (Basel)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Equivalent deformation modulus of sandy pebble soil-Mathematical derivation and numerical simulation.
+</td>
+<td style="text-align:left;">
+Huang JZ, Xu GY, Wang Y, Ouyang XW.
+</td>
+<td style="text-align:left;">
+Math Biosci Eng
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[The “elimination of the four pests” movement in Guangzhou from 1949 to 1959: focusing on the report of Nanfang Daily and Guangzhou Daily].
+</td>
+<td style="text-align:left;">
+Zhu SY.
+</td>
+<td style="text-align:left;">
+Zhonghua Yi Shi Za Zhi
+</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>write.table(dat, &#39;disaster_paper.txt&#39;, sep=&quot;&quot;, row.names = F, quote = F)</code></pre>
