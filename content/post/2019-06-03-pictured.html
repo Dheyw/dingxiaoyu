@@ -1,0 +1,28 @@
+---
+title: pictured
+author: ''
+date: '2019-06-03'
+slug: pictured
+categories: []
+tags: []
+---
+
+
+
+<pre class="r"><code># Data
+library(ggplot2)</code></pre>
+<pre><code>## Registered S3 methods overwritten by &#39;ggplot2&#39;:
+##   method         from 
+##   [.quosures     rlang
+##   c.quosures     rlang
+##   print.quosures rlang</code></pre>
+<pre class="r"><code>data=data.frame(cond = rep(c(&quot;condition_1&quot;, &quot;condition_2&quot;), each=10), my_x = 1:100 + rnorm(100,sd=9), my_y = 1:100 + rnorm(100,sd=16) )
+# Basic scatter plot. Shape=1 is to have circles
+ggplot(data, aes(x=my_x, y=my_y)) + geom_point(shape=1)</code></pre>
+<p><img src="/post/2019-06-03-pictured_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code># Add a linear trend :
+ggplot(data, aes(x=my_x, y=my_y)) +    geom_point(shape=1) +  geom_smooth(method=lm , color=&quot;red&quot;, se=FALSE)  # Add linear regression line </code></pre>
+<p><img src="/post/2019-06-03-pictured_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
+<pre class="r"><code># Add a linear trend :
+ggplot(data, aes(x=my_x, y=my_y)) +    geom_point(shape=1) +  geom_smooth(method=lm , color=&quot;red&quot;, se=TRUE)  # Add linear regression line </code></pre>
+<p><img src="/post/2019-06-03-pictured_files/figure-html/unnamed-chunk-1-3.png" width="672" /></p>
