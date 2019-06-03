@@ -12,12 +12,21 @@
     
     
     <item>
-      <title>pictured</title>
+      <title>ggplot点状图</title>
       <link>/2019/06/03/pictured/</link>
       <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/06/03/pictured/</guid>
       <description># Datalibrary(ggplot2)## Registered S3 methods overwritten by &amp;#39;ggplot2&amp;#39;:## method from ## [.quosures rlang## c.quosures rlang## print.quosures rlangdata=data.frame(cond = rep(c(&amp;quot;condition_1&amp;quot;, &amp;quot;condition_2&amp;quot;), each=10), my_x = 1:100 + rnorm(100,sd=9), my_y = 1:100 + rnorm(100,sd=16) )# Basic scatter plot. Shape=1 is to have circlesggplot(data, aes(x=my_x, y=my_y)) + geom_point(shape=1)# Add a linear trend :ggplot(data, aes(x=my_x, y=my_y)) + geom_point(shape=1) + geom_smooth(method=lm , color=&amp;quot;red&amp;quot;, se=FALSE) # Add linear regression line # Add a linear trend :ggplot(data, aes(x=my_x, y=my_y)) + geom_point(shape=1) + geom_smooth(method=lm , color=&amp;quot;red&amp;quot;, se=TRUE) # Add linear regression line </description>
+    </item>
+    
+    <item>
+      <title>rvest</title>
+      <link>/2019/06/03/rvest/</link>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/03/rvest/</guid>
+      <description></description>
     </item>
     
     <item>
