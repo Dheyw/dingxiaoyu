@@ -1,0 +1,16 @@
+---
+title:抓取表格数据(抓取勇士队的球员数据)
+author: ''
+date: '2019-06-03'
+slug: qq
+categories: []
+tags: []
+---
+```{r}
+library(XML)
+url <- 'http://www.stat-nba.com/team/GSW.html'
+dt1 <- readHTMLTable(url,header = T)
+names(dt1[[1]]) <- rvest::repair_encoding(names(dt1[[1]]))
+head(dt1[[1]])
+```
+

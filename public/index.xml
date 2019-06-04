@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>qq</title>
+      <link>/2019/06/03/qq/</link>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/03/qq/</guid>
+      <description>library(XML)url &amp;lt;- &amp;#39;http://www.stat-nba.com/team/GSW.html&amp;#39;dt1 &amp;lt;- readHTMLTable(url,header = T)names(dt1[[1]]) &amp;lt;- rvest::repair_encoding(names(dt1[[1]]))## Best guess: UTF-8 (100% confident)head(dt1[[1]])## 球员 出场 首发 时间 投篮 命中 出手 三分 命中 出手 罚球## 1 斯蒂芬-库里 69 69 33.7 47.2% 9.2 19.4 43.7% 5.1 11.7 91.6%## 2 凯文-杜兰特 78 78 34.7 52.1% 9.2 17.7 35.3% 1.8 5.0 88.5%## 3 克莱-汤普森 78 78 34.0 46.7% 8.4 18.0 40.2% 3.1 7.7 81.</description>
+    </item>
+    
+    <item>
       <title>rvest 爬取ncbi文献列表</title>
       <link>/2019/06/03/r/</link>
       <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
