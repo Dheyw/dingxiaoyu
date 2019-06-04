@@ -1,0 +1,30 @@
+---
+title: '22'
+author: ''
+date: '2019-06-04'
+slug: '22'
+categories: []
+tags: []
+---
+```{r}
+library(xml2)  #加载包
+library(rvest)  #加载包
+url<-'http://www.gov.cn/zhuanti/2018lh/2018zfgzbg/zfgzbg.htm' 
+web<-read_html(url,encoding="utf-8") #读取数据，规定编码  
+position<-web %>% html_nodes("div.event_box div p") %>% html_text() 
+
+library(jiebaRD)  #加载包
+library(jiebaR) #加载包
+engine_s<-worker(stop_word = "C:\\dingxiaoyu\\public\\stopwords.txt")#初始化分词引擎并加载停用词。  
+seg<-segment(position,engine_s)#分词  
+f<-freq(seg) #统计词频  
+f<-f[order(f[2],decreasing=TRUE),] #根据词频降序排列  
+library(yaml)# 加载包
+library(wordcloud2)#加载包  
+f1<-f[1:100,]     #提取前100词
+wordcloud2(f1, size = 0.8 ,shape='circle')    #形状设置为圆形
+
+
+
+```
+
