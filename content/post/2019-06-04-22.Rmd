@@ -1,14 +1,9 @@
 ---
-title:22
-author: 
-date: '2019-06-04'
-slug: 22
-categories: []
-tags: []
+title: 22
+
 ---
 ```{r}
-install.packages("xml2")
-install.packages("rvest")
+
 library(xml2)  #加载包
 library(rvest)  #加载包
 url<-'http://www.gov.cn/zhuanti/2018lh/2018zfgzbg/zfgzbg.htm' 
@@ -17,7 +12,7 @@ position<-web %>% html_nodes("div.event_box div p") %>% html_text()
 
 library(jiebaRD)  #加载包
 library(jiebaR) #加载包
-engine_s<-worker(stop_word = "C:\\dingxiaoyu\\public\\stopwords.txt")#初始化分词引擎并加载停用词。  
+engine_s<-worker(stop_word = "C://dingxiaoyu//stopwords.txt")#初始化分词引擎并加载停用词。  
 seg<-segment(position,engine_s)#分词  
 f<-freq(seg) #统计词频  
 f<-f[order(f[2],decreasing=TRUE),] #根据词频降序排列  
