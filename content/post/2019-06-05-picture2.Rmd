@@ -1,14 +1,15 @@
 ---
-title:circle picture
-
+title:xiang nian nian 
 ---
 ```{r}
 library(DiagrammeR)
 grViz("")
-grViz("digraph fig{scu[label='四川大学'，shape=box,color=blue]
-scu->{A,B,C,D,E}
-A ->E
-B->E
+grViz("digraph fig{scu[label='xingxing'，shape=box,color=blue]
+node [color =yellow]
+edge [color=grey]
+scu->{niannian,xiaotian,lianlian,lay,tiancai}
+niannian ->lianlian
+niannian->lay
 }
 ")
 
