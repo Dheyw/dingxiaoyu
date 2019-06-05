@@ -1,20 +1,15 @@
 ---
-title: picture2
-author: ''
-date: '2019-06-05'
-slug: picture2
-categories: []
-tags: []
+title:circle picture
+
 ---
 ```{r}
 library(DiagrammeR)
-grViz
-"
- digraph fig{
- scu[labe]='四川大学‘，shape=box, color=red]
-scu -> {A,B,C,D,E}
-A -> E
-E -> B
+grViz("")
+grViz("digraph fig{scu[label='四川大学'，shape=box,color=blue]
+scu->{A,B,C,D,E}
+A ->E
+B->E
 }
-"
+")
+
 ```
