@@ -4,14 +4,29 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-06-03T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-06-03T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/2019/06/05/xiang-nian-nian%E5%9B%BE/</loc>
+    <lastmod>2019-06-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2019/06/05/%E5%8B%87%E5%A3%AB%E9%98%9F/</loc>
+    <lastmod>2019-06-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2019/06/05/%E6%94%BF%E5%BA%9C%E5%B7%A5%E4%BD%9C%E6%8A%A5%E5%91%8A%E7%88%AC%E8%99%AB%E8%AF%8D%E4%BA%91/</loc>
+    <lastmod>2019-06-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -55,10 +70,6 @@
   </url>
   
   <url>
-    <loc>/1/01/01/22/</loc>
-  </url>
-  
-  <url>
     <loc>/categories/</loc>
     <priority>0</priority>
   </url>
@@ -66,14 +77,6 @@
   <url>
     <loc>/tags/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/1/01/01/xiang-nian-nian/</loc>
-  </url>
-  
-  <url>
-    <loc>/1/01/01/yongshidui/</loc>
   </url>
   
 </urlset>
