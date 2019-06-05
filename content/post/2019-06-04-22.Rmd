@@ -1,12 +1,14 @@
 ---
-title: '22'
-author: ''
+title:22
+author: 
 date: '2019-06-04'
-slug: '22'
+slug: 22
 categories: []
 tags: []
 ---
 ```{r}
+install.packages("xml2")
+install.packages("rvest")
 library(xml2)  #加载包
 library(rvest)  #加载包
 url<-'http://www.gov.cn/zhuanti/2018lh/2018zfgzbg/zfgzbg.htm' 
