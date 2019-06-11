@@ -1,0 +1,28 @@
+---
+title: 计算距离放假还有多少天/小时/秒
+author: ''
+date: '2019-06-11'
+slug: so
+categories: []
+tags: []
+---
+
+
+
+<p>计算距离放假还有多少天</p>
+<pre class="r"><code> now &lt;- Sys.time()
+myTime &lt;- strptime(&quot;2019-07-13 12:00:00&quot;, format = &quot;%Y-%m-%d %H:%M:%S&quot;)
+difftime(myTime,now)</code></pre>
+<pre><code>## Time difference of 31.74783 days</code></pre>
+<p>计算距离放假还有多少小时</p>
+<pre class="r"><code>difftime(myTime,now,  units = &quot;hours&quot;)</code></pre>
+<pre><code>## Time difference of 761.948 hours</code></pre>
+<p>计算距离放假还有多少分钟</p>
+<pre class="r"><code>difftime( myTime,now, units = &quot;mins&quot;)</code></pre>
+<pre><code>## Time difference of 45716.88 mins</code></pre>
+<p>计算距离放假还有多少秒</p>
+<pre class="r"><code>difftime(myTime,now,  units = &quot;secs&quot;)</code></pre>
+<pre><code>## Time difference of 2743013 secs</code></pre>
+<div id="-_-" class="section level2">
+<h2>日常想放假~-_-~</h2>
+</div>

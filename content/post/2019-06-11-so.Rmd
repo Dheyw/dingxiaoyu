@@ -1,0 +1,27 @@
+---
+title: 计算距离放假还有多少天/小时/秒
+author: ''
+date: '2019-06-11'
+slug: so
+categories: []
+tags: []
+---
+计算距离放假还有多少天
+```{r}
+ now <- Sys.time()
+myTime <- strptime("2019-07-13 12:00:00", format = "%Y-%m-%d %H:%M:%S")
+difftime(myTime,now)
+```
+计算距离放假还有多少小时
+```{r}
+difftime(myTime,now,  units = "hours")
+```
+计算距离放假还有多少分钟
+```{r}
+difftime( myTime,now, units = "mins")
+```
+计算距离放假还有多少秒
+```{r}
+difftime(myTime,now,  units = "secs")
+```
+##日常想放假~-_-~

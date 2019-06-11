@@ -6,10 +6,23 @@
     <description>Recent content on A Hugo website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>计算距离放假还有多少天/小时/秒</title>
+      <link>/2019/06/11/so/</link>
+      <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/11/so/</guid>
+      <description>计算距离放假还有多少天
+ now &amp;lt;- Sys.time()myTime &amp;lt;- strptime(&amp;quot;2019-07-13 12:00:00&amp;quot;, format = &amp;quot;%Y-%m-%d %H:%M:%S&amp;quot;)difftime(myTime,now)## Time difference of 31.74783 days计算距离放假还有多少小时
+difftime(myTime,now, units = &amp;quot;hours&amp;quot;)## Time difference of 761.948 hours计算距离放假还有多少分钟
+difftime( myTime,now, units = &amp;quot;mins&amp;quot;)## Time difference of 45716.88 mins计算距离放假还有多少秒
+difftime(myTime,now, units = &amp;quot;secs&amp;quot;)## Time difference of 2743013 secs日常想放假~-_-~</description>
+    </item>
     
     <item>
       <title>计算上大学的天数</title>
@@ -110,11 +123,11 @@ emmmm女孩子嘛，做好东西第一件事绝对不是吃，必须得拍照hhh
       <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/05/10/bipenggou/</guid>
-      <description>其实吧，我是不大愿意跟我爸一起出去的，为什么呢？很简单，因为他到哪里都要找个茶楼坐坐…
+      <description>其实吧，我是不大愿意跟我爸一起出去的，为什么呢？很简单，因为他到哪里都要找个茶楼坐坐…
 这次开车到了毕棚沟大概是十点半，因为要等他的朋友一家人，然后我们就在景区入口的一个酒店的茶楼里坐着喝茶……没错，是去景区喝茶…哦顺带还把中午的餐订了
 野菜和野猪肉还蛮好吃，各种野菜名字奇奇怪怪也蛮有趣。中午吃饭吃到了快两点，老爸还说去茶楼歇会再上山（哭笑不得，不过最后还是被我拉上山去了
 景区很美，就是山上有点冷，不过不碍事，风景好就好啦
-##山，水，草木葱郁##时不时路上会有几个大大小小的瀑布##爬山到中途的时候还下起了小雨##雨中漫步居然还有点舒服##整座山不一会儿就雾蒙蒙的，不过还有点好看##我们在山间穿梭##累 是真的，大部分山路都是挺陡的梯步##不过美 也是真的，美好的事物真的会让人心情愉悦##哦，冷 也是真的，毕竟我鸡皮疙瘩都冷出来了##哈哈哈不过还是开心的</description>
+山，水，草木葱郁时不时路上会有几个大大小小的瀑布爬山到中途的时候还下起了小雨雨中漫步居然还有点舒服整座山不一会儿就雾蒙蒙的，不过还有点好看我们在山间穿梭累 是真的，大部分山路都是挺陡的梯步不过美 也是真的，美好的事物真的会让人心情愉悦哦，冷 也是真的，毕竟我鸡皮疙瘩都冷出来了哈哈哈不过还是开心的</description>
     </item>
     
     <item>
