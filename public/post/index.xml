@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>pilgram</title>
+      <title>计算上大学的天数</title>
       <link>/2019/06/06/pilgram/</link>
       <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/06/06/pilgram/</guid>
-      <description></description>
+      <description>today &amp;lt;- Sys.Date()gtd &amp;lt;- as.Date(&amp;quot;2017-09-01&amp;quot;) today - gtd## Time difference of 648 days</description>
     </item>
     
     <item>

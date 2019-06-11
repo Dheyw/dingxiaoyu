@@ -1,8 +1,15 @@
 ---
-title: pilgram
+title: 计算上大学的天数
 author: ''
 date: '2019-06-06'
 slug: pilgram
 categories: []
 tags: []
 ---
+```{r}
+today <- Sys.Date()
+gtd <- as.Date("2017-09-01") 
+today - gtd
+
+```
+
